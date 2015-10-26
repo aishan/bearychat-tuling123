@@ -12,7 +12,7 @@ require_once 'curl.php';//引入curl类
 $content = file_get_contents("php://input");//读取bearychat机器人post过来的数据
 $content_arr=json_decode($content);//json转对象
 $info=urlencode(substr($content_arr->text,11));//获取传过来的内容中的text字段并截取实际内容部分，去掉触发bearychat机器人的前缀
-$key='2d65d10e6be0e6595558f0bfc4e8ad52';// 图灵机器人网站获取的key
+$key='2d6***********************c4e8ad52';// 图灵机器人网站获取的key
 $request_url="http://www.tuling123.com/openapi/api?key=".$key."&info=".$info;//拼接图灵机器人所需请求url
 $curl=new CURL();
 $request=$curl->vget($request_url);//发送请求
